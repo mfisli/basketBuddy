@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     // Android Studio: VCS -> Update Project
     // I can see the above comment in android studio
     // Android Studio: VCS -> Commit Changes
+    // Success! Now you try (: 
 
 
 }
