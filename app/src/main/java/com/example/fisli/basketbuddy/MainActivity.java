@@ -10,5 +10,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
     // this is a comment I made on the gitHub text editor
+    // Android Studio: VCS -> Update Project
+    // I can see the above comment in android studio
+    // Android Studio: VCS -> Commit Changes
+    
+
 }
