@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     // Success! Now you try (:
 
 
-    //Rachel was heref
+    //Rachel was here
 
 
 }
