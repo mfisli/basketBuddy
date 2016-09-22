@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Dalton was here
     //Trying again
-    // "Cool Beans", said Maks. 
+    // "Cool Beans", said Maks.
+    //Yeah everything works
 
 }
