@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Basket Buddy</string>
+    <string name="title_activity_item_edit">itemEditActivity</string>
+    <string name="itemName">Name: </string>
+    <string name="itemQuantity">Quantity: </string>
+    <string name="itemAisle">Aisle: </string>
+    <string name="editBtn">Edit</string>
+    <string name="doneBtn">Done</string>
+    <string name="storeTitle">Save On Foods</string>
+    <string name="item1">Bananas [4]</string>
+    <string name="myTripsBtn">My Trips</string>
+    <string name="newTripBtn">New Trip</string>
+    <string name="viewSpendBtn">View Spending</string>
+</resources>
