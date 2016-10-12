@@ -1,28 +1,33 @@
 package com.example.fisli.basketbuddy;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class Home extends AppCompatActivity {
-//it actually pushed
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
     }
 
-    // this is a comment I made on the gitHub text editor
-    // Android Studio: VCS -> Update Project
-    // I can see the above comment in android studio
-    // Android Studio: VCS -> Commit Changes
-    // Success! Now you try (:
+    //starts New Trip Activity
+    public void openNewTrip() {
+        //Intent myIntent = new Intent(Home.this, NewTrip.class);
+        //Home.this.startActivity(myIntent);
+    }
 
+    //starts Trip History Activity
+    public void openMyTrips() {
+        Intent myIntent = new Intent(Home.this, TripHistory.class);
+        Home.this.startActivity(myIntent);
+    }
 
-    //Rachel was here
-    // *whisper* that's a good girl
-
-    //Dalton was here
-    //Trying again
-    // "Cool Beans", said Maks. 
+    //starts Average Spending Activity
+    public void openAvgSpending() {
+        Intent myIntent = new Intent(Home.this, AvgSpending.class);
+        Home.this.startActivity(myIntent);
+    }
 
 }
