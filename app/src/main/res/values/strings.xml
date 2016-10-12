@@ -11,4 +11,9 @@
     <string name="myTripsBtn">My Trips</string>
     <string name="newTripBtn">New Trip</string>
     <string name="viewSpendBtn">View Spending</string>
+    <string name="receiptInputMessage">How much did you spend?</string>
+    <string name="moneySymbol">$</string>
+    <string name="tripSummaryMessage">Trip Summary</string>
+    <string name="tripSummaryTotal">Total: $666</string>
+    <string name="tripSummaryOKBtn">Ok</string>
 </resources>

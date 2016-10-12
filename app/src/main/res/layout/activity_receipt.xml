@@ -9,4 +9,31 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.fisli.basketbuddy.Receipt">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/receiptInputMessage"
+        android:id="@+id/receiptInputMessage"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/moneySymbol"
+        android:id="@+id/moneySymbol"
+        android:layout_marginTop="95dp"
+        android:layout_below="@+id/receiptInputMessage"
+        android:layout_toLeftOf="@+id/receiptInput"
+        android:layout_toStartOf="@+id/receiptInput" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/receiptInput"
+        android:layout_alignTop="@+id/moneySymbol"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
