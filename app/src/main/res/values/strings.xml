@@ -16,4 +16,8 @@
     <string name="tripSummaryMessage">Trip Summary</string>
     <string name="tripSummaryTotal">Total: $666</string>
     <string name="tripSummaryOKBtn">Ok</string>
+    <string name="avgSpendingMessage">Average Spending:</string>
+    <string name="avgSpendingTotal">$666</string>
+    <string name="avgSpendingRange">For x trips in y weeks</string>
+    <string name="avgSpendingBackBtn">Back</string>
 </resources>

@@ -9,4 +9,40 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.fisli.basketbuddy.AvgSpending">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/avgSpendingMessage"
+        android:id="@+id/avgSpendingMessage"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/avgSpendingTotal"
+        android:id="@+id/avgSpendingTotal"
+        android:layout_above="@+id/avgSpendingRange"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="95dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/avgSpendingRange"
+        android:id="@+id/avgSpendingRange"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/avgSpendingMessage"
+        android:layout_alignStart="@+id/avgSpendingMessage" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/avgSpendingBackBtn"
+        android:id="@+id/avgSpendingBackBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
