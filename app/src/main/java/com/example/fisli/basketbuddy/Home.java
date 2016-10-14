@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class Home extends AppCompatActivity {
-
+    // hello, my name is Maks and I do not like Android Studio
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
