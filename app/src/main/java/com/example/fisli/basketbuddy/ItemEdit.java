@@ -1,5 +1,6 @@
 package com.example.fisli.basketbuddy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -23,6 +24,11 @@ public class ItemEdit extends AppCompatActivity {
 //                        .setAction("Action", null).show();
 //            }
 //        });
+    }
+
+    public void backToStore(View v) {
+        Intent myIntent = new Intent(ItemEdit.this, Store.class);
+        ItemEdit.this.startActivity(myIntent);
     }
 
 }

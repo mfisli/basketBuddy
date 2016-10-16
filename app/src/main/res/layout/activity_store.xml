@@ -50,6 +50,7 @@
         android:id="@+id/done"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/newtripTitle"
-        android:layout_alignEnd="@+id/newtripTitle" />
+        android:layout_alignEnd="@+id/newtripTitle"
+         />
 
 </RelativeLayout>

@@ -27,7 +27,8 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_toRightOf="@+id/item1"
-        android:layout_toEndOf="@+id/item1" />
+        android:layout_toEndOf="@+id/item1"
+        android:onClick="startReceipt" />
 
     <Button
         android:layout_width="wrap_content"
@@ -40,7 +41,8 @@
         android:layout_marginRight="36dp"
         android:layout_marginEnd="36dp"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="startItemEdit" />
 
     <CheckBox
         android:layout_width="wrap_content"
