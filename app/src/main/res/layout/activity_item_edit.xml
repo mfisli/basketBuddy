@@ -9,8 +9,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".ItemEdit"
-    tools:showIn="@layout/activity_item_edit">
+    tools:context=".ItemEdit">
+    <!--tools:showIn="@layout/activity_item_edit"> -->
 
     <TextView
         android:layout_width="wrap_content"
@@ -46,15 +46,17 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/itemNameInput"
+        android:inputType="text"
         android:layout_alignBottom="@+id/itemName"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_alignStart="@+id/editText2" />
+        android:layout_alignLeft="@+id/itemQuantityInput"
+        android:layout_alignStart="@+id/itemQuantityInput" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
+        android:id="@+id/itemQuantityInput"
+        android:inputType="text"
         android:layout_alignBottom="@+id/itemQuantity"
         android:layout_toRightOf="@+id/itemQuantity"
         android:layout_toEndOf="@+id/itemQuantity" />
@@ -62,8 +64,19 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText3"
+        android:id="@+id/itemAisleInput"
+        android:inputType="text"
         android:layout_alignBottom="@+id/itemAisle"
         android:layout_toRightOf="@+id/itemQuantity"
         android:layout_toEndOf="@+id/itemQuantity" />
+
+    <Button
+        android:text="@string/doneBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/doneBtn"
+        android:onClick=""/>
+
 </RelativeLayout>

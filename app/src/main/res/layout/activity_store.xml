@@ -9,48 +9,93 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     -->
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:clipToPadding="false"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="60dp"
-        android:layout_marginTop="120dp"
-        android:clickable="true"
-        android:background="@android:color/holo_blue_dark"
-        android:id="@+id/listStores">
-
-    </ScrollView>
 
     <TextView
+        android:text="@string/storeAddressLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="New Trip"
-        android:id="@+id/newtripTitle"
+        android:layout_marginTop="80dp"
+        android:id="@+id/storeAddressLabel"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp" />
+
+    <TextView
+        android:text="@string/storeNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:id="@+id/storeNameLabel"
+        android:layout_below="@+id/storeHoursLabel"
+        android:layout_alignLeft="@+id/storeHoursLabel"
+        android:layout_alignStart="@+id/storeHoursLabel" />
+
+    <TextView
+        android:text="@string/storeHoursLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:id="@+id/storeHoursLabel"
+        android:layout_below="@+id/storeAddressLabel"
+        android:layout_alignLeft="@+id/storeAddressLabel"
+        android:layout_alignStart="@+id/storeAddressLabel" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignTop="@+id/storeAddressLabel"
+        android:layout_toRightOf="@+id/storeNameLabel"
+        android:layout_toEndOf="@+id/storeNameLabel"
+        android:id="@+id/storeAddressInput" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignTop="@+id/storeHoursLabel"
+        android:layout_toRightOf="@+id/storeHoursLabel"
+        android:layout_toEndOf="@+id/storeHoursLabel"
+        android:id="@+id/storeHoursInput" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignTop="@+id/storeNameLabel"
+        android:layout_alignLeft="@+id/storeHoursInput"
+        android:layout_alignStart="@+id/storeHoursInput"
+        android:id="@+id/storeNameInput" />
+
+    <TextView
+        android:text="@string/storeTitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textStyle="normal|bold" />
+        android:id="@+id/storeTitleLabel" />
 
     <Button
-        android:text="New Store"
+        android:text="@string/doneBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
-        android:id="@+id/createStore"
-        android:layout_below="@+id/newtripTitle"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="Done"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/done"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/newtripTitle"
-        android:layout_alignEnd="@+id/newtripTitle"
-         />
+        android:layout_centerHorizontal="true"
+        android:id="@+id/doneBtn"
+        android:onClick="backToNewTrip"/>
 
+    <Button
+        android:text="@string/createNewItemBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/storeNameInput"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/createNewItemBtn"
+        android:onClick="createNewItem"/>
 </RelativeLayout>

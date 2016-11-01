@@ -11,13 +11,19 @@
     <string name="myTripsBtn">My Trips</string>
     <string name="newTripBtn">New Trip</string>
     <string name="viewSpendBtn">View Spending</string>
+    <!-- #3 Store / single stop screen -->
+    <string name="storeAddressLabel">Address: </string>
+    <string name="storeHoursLabel">Store Hours: </string>
+    <string name="storeNameLabel">Store Name: </string>
+    <string name="storeTitleLabel">New Store</string>
+    <string name="createNewItemBtn">Add Item</string>
     <!-- #7 receipt Activity -->
     <string name="receiptInputMessage">How much did you spend?</string>
     <string name="moneySymbol">$</string>
     <!-- #8 tripSummary Activity -->
     <string name="tripSummaryMessage">Trip Summary</string>
     <string name="tripSummaryTotal">Total: $666</string>
-    <string name="tripSummaryOKBtn">Ok</string>
+    <string name="tripSummaryOKBtn">OK</string>
     <!-- #10 avgSpending Activity -->
     <string name="avgSpendingMessage">Average Spending:</string>
     <string name="avgSpendingTotal">$666</string>
