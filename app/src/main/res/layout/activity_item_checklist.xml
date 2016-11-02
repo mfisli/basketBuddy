@@ -42,7 +42,7 @@
         android:layout_marginEnd="36dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:onClick="startItemEdit" />
+        android:onClick="startStoreEdit" />
 
     <CheckBox
         android:layout_width="wrap_content"

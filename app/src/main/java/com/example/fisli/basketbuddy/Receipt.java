@@ -14,7 +14,13 @@ public class Receipt extends AppCompatActivity {
     }
 
 //    public void backToMyTrip(View v) {
-//        Intent myIntent = new Intent(Receipt.this, MyTrip.class);
+//        Intent myIntent = new Intent(Receipt.this, Store.class);
 //        Receipt.this.startActivity(myIntent);
 //    }
+
+    public void saveSpending(View v) {
+        Intent myIntent = new Intent(Receipt.this, TripSummary.class);
+        Receipt.this.startActivity(myIntent);
+    }
+
 }

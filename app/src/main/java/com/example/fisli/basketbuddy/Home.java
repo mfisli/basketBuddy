@@ -3,6 +3,7 @@ package com.example.fisli.basketbuddy;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 public class Home extends AppCompatActivity {
@@ -15,8 +16,8 @@ public class Home extends AppCompatActivity {
 
     //starts New Trip Activity
     public void startNewTrip(View v) {
-        //Intent myIntent = new Intent(Home.this, NewTrip.class);
-        //Home.this.startActivity(myIntent);
+        Intent myIntent = new Intent(Home.this, NewTrip.class);
+        Home.this.startActivity(myIntent);
     }
 
     //starts Trip History Activity

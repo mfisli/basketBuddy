@@ -24,8 +24,9 @@
         <activity android:name=".Receipt" />
         <activity android:name=".TripHistory" />
         <activity android:name=".AvgSpending" />
-        <activity android:name=".Store" />
-        <activity android:name=".NewTrip"></activity>
+        <activity android:name=".EditStore" />
+        <activity android:name=".NewTrip" />
+        <activity android:name=".Trip"></activity>
     </application>
 
 </manifest>

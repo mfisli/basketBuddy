@@ -18,8 +18,8 @@ public class ItemChecklist extends AppCompatActivity {
         ItemChecklist.this.startActivity(myIntent);
     }
 
-    public void startItemEdit(View v) {
-        Intent myIntent = new Intent(ItemChecklist.this, ItemEdit.class);
+    public void startStoreEdit(View v) {
+        Intent myIntent = new Intent(ItemChecklist.this, EditStore.class);
         ItemChecklist.this.startActivity(myIntent);
     }
 }

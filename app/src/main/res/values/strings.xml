@@ -11,7 +11,7 @@
     <string name="myTripsBtn">My Trips</string>
     <string name="newTripBtn">New Trip</string>
     <string name="viewSpendBtn">View Spending</string>
-    <!-- #3 Store / single stop screen -->
+    <!-- #3 EditStore / single stop screen -->
     <string name="storeAddressLabel">Address: </string>
     <string name="storeHoursLabel">Store Hours: </string>
     <string name="storeNameLabel">Store Name: </string>

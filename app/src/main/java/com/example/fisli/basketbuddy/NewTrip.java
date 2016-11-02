@@ -14,13 +14,12 @@ public class NewTrip extends AppCompatActivity {
     }
 
     public void startNewStore(View v) {
-        Intent myIntent = new Intent(NewTrip.this, Store.class);
+        Intent myIntent = new Intent(NewTrip.this, EditStore.class);
         NewTrip.this.startActivity(myIntent);
     }
 
-    //this screen doesnt exist yet
-//    public void startMyTrip(View v) {
-//        Intent myIntent = new Intent(NewTrip.this, MyTrip.class);
-//        NewTrip.this.startActivity(myIntent);
-//    }
+    public void startMyTrip(View v) {
+        Intent myIntent = new Intent(NewTrip.this, Trip.class);
+        NewTrip.this.startActivity(myIntent);
+    }
 }

@@ -2,10 +2,7 @@ package com.example.fisli.basketbuddy;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 public class ItemEdit extends AppCompatActivity {
@@ -27,7 +24,7 @@ public class ItemEdit extends AppCompatActivity {
     }
 
     public void backToStore(View v) {
-        Intent myIntent = new Intent(ItemEdit.this, Store.class);
+        Intent myIntent = new Intent(ItemEdit.this, EditStore.class);
         ItemEdit.this.startActivity(myIntent);
     }
 

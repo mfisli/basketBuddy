@@ -36,4 +36,14 @@
         android:id="@+id/receiptInput"
         android:layout_alignTop="@+id/moneySymbol"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp"
+        android:id="@+id/save"
+        android:onClick="saveSpending"/>
 </RelativeLayout>

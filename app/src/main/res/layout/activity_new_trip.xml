@@ -41,7 +41,8 @@
         android:layout_marginTop="38dp"
         android:id="@+id/createStore"
         android:layout_below="@+id/newtripTitle"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="startNewStore"/>
 
     <Button
         android:text="Done"
@@ -50,5 +51,6 @@
         android:id="@+id/done"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/newtripTitle"
-        android:layout_alignEnd="@+id/newtripTitle"/>
+        android:layout_alignEnd="@+id/newtripTitle"
+        android:onClick="startMyTrip"/>
 </RelativeLayout>

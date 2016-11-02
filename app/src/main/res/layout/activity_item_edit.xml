@@ -77,6 +77,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/doneBtn"
-        android:onClick=""/>
+        android:onClick="backToStore"/>
 
 </RelativeLayout>
