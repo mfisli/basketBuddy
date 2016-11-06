@@ -26,7 +26,7 @@
         <activity android:name=".AvgSpending" />
         <activity android:name=".EditStore" />
         <activity android:name=".NewTrip" />
-        <activity android:name=".Trip"></activity>
+        <activity android:name=".TripMenu"></activity>
     </application>
 
 </manifest>

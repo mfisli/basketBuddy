@@ -14,13 +14,13 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
     }
 
-    //starts New Trip Activity
+    //starts New TripMenu Activity
     public void startNewTrip(View v) {
         Intent myIntent = new Intent(Home.this, NewTrip.class);
         Home.this.startActivity(myIntent);
     }
 
-    //starts Trip History Activity
+    //starts TripMenu History Activity
     public void startMyTrips(View v) {
         Intent myIntent = new Intent(Home.this, TripHistory.class);
         Home.this.startActivity(myIntent);

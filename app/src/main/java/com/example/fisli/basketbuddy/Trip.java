@@ -1,26 +1,19 @@
 package com.example.fisli.basketbuddy;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
+/**
+ * Created by rshellborn on 2016-11-05.
+ */
+public class Trip {
+    private Store[] stores;
+    private double totalSpent;
+    //private Date date; maybe add this later?
 
-public class Trip extends AppCompatActivity {
+    public Trip() {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_trip);
     }
 
-    public void endTrip(View v) {
-        Intent myIntent = new Intent(Trip.this, TripSummary.class);
-        Trip.this.startActivity(myIntent);
+    public Trip(Store[] stores, double totalSpent) {
+        this.stores = stores;
+        this.totalSpent = totalSpent;
     }
-
-    public void startShopping(View v) {
-        Intent myIntent = new Intent(Trip.this, ItemChecklist.class);
-        Trip.this.startActivity(myIntent);
-    }
-
 }

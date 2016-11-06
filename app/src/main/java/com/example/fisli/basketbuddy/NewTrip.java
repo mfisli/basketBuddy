@@ -19,7 +19,7 @@ public class NewTrip extends AppCompatActivity {
     }
 
     public void startMyTrip(View v) {
-        Intent myIntent = new Intent(NewTrip.this, Trip.class);
+        Intent myIntent = new Intent(NewTrip.this, TripMenu.class);
         NewTrip.this.startActivity(myIntent);
     }
 }
