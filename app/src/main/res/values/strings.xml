@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">Basket Buddy</string>
     <string name="title_activity_item_edit">itemEditActivity</string>
-    <string name="itemName">Name: </string>
-    <string name="itemQuantity">Quantity: </string>
-    <string name="itemAisle">Aisle: </string>
+    <!-- #4 itemEdit Activity -->
+    <string name="itemOutputMessage">Edit your item</string>
+    <string name="itemEditName">Name: </string>
+    <string name="itemEditQuantity">Quantity: </string>
+    <string name="itemEditAisle">Aisle: </string>
     <string name="editBtn">Edit</string>
     <string name="doneBtn">Done</string>
     <string name="storeTitle">Save On Foods</string>
@@ -18,7 +20,7 @@
     <string name="storeTitleLabel">New Store</string>
     <string name="createNewItemBtn">Add Item</string>
     <!-- #7 receipt Activity -->
-    <string name="receiptInputMessage">How much did you spend?</string>
+    <string name="receiptOutputMessage">How much did you spend?</string>
     <string name="moneySymbol">$</string>
     <!-- #8 tripSummary Activity -->
     <string name="tripSummaryMessage">Trip Summary</string>
