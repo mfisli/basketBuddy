@@ -1,13 +1,25 @@
 package com.example.fisli.basketbuddy;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.location.Address;
 
-public class Store extends AppCompatActivity {
+/**
+ * Created by rshellborn on 2016-11-05.
+ */
+public class Store extends Trip {
+    private Address address;
+    private int hours; //need to plan how this will be stored
+    private String name;
+    private Item[] items;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_store);
+    public Store() {
+
     }
+
+    public Store(Address address, int hours, String name, Item[] items) {
+        this.address = address;
+        this.hours = hours;
+        this.name = name;
+        this.items = items;
+    }
+
 }

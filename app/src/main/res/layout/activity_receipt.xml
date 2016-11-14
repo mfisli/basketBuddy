@@ -7,26 +7,33 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
     tools:context="com.example.fisli.basketbuddy.Receipt">
 
-    <TextView
+    <Button
+        android:text="Save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/receiptOutputMessage"
-        android:id="@+id/receiptOutputMessage"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp"
+        android:id="@+id/save"
+        android:onClick="saveSpending"
+        android:background="@color/color_purple"
+        android:textColor="@android:color/background_light" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="@string/moneySymbol"
         android:id="@+id/moneySymbol"
-        android:layout_marginTop="95dp"
-        android:layout_below="@+id/receiptOutputMessage"
+        android:textSize="30sp"
+        android:textStyle="normal|bold"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/save"
         android:layout_toLeftOf="@+id/receiptInput"
-        android:layout_toStartOf="@+id/receiptInput" />
+        android:layout_toStartOf="@+id/receiptInput"
+        android:layout_marginBottom="161dp"
+        android:textColor="@android:color/black" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -35,5 +42,18 @@
         android:ems="10"
         android:id="@+id/receiptInput"
         android:layout_alignTop="@+id/moneySymbol"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/receiptInputMessage"
+        android:id="@+id/receiptInputMessage"
+        android:textSize="24sp"
+        android:textAllCaps="false"
+        android:textStyle="normal|bold"
+        android:layout_marginBottom="65dp"
+        android:layout_above="@+id/receiptInput"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

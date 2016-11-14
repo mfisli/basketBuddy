@@ -7,6 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
     tools:context="com.example.fisli.basketbuddy.AvgSpending">
 
     <TextView
@@ -16,7 +17,9 @@
         android:text="@string/avgSpendingMessage"
         android:id="@+id/avgSpendingMessage"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textSize="36sp"
+        android:textStyle="normal|bold" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -26,7 +29,20 @@
         android:id="@+id/avgSpendingTotal"
         android:layout_above="@+id/avgSpendingRange"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="95dp" />
+        android:layout_marginBottom="95dp"
+        android:textStyle="normal|bold"
+        android:textSize="24sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/avgSpendingBackBtn"
+        android:id="@+id/avgSpendingBackBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="backToHome"
+        android:background="@color/color_purple"
+        android:textColor="@android:color/background_light" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -35,14 +51,6 @@
         android:text="@string/avgSpendingRange"
         android:id="@+id/avgSpendingRange"
         android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/avgSpendingMessage"
-        android:layout_alignStart="@+id/avgSpendingMessage" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/avgSpendingBackBtn"
-        android:id="@+id/avgSpendingBackBtn"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textStyle="normal|bold" />
 </RelativeLayout>
