@@ -7,53 +7,51 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
     tools:context=".Home">
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:height="80dp"
         android:text="@string/newTripBtn"
         android:id="@+id/newTrip"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="59dp"
-        android:layout_alignLeft="@+id/myTrips"
-        android:layout_alignStart="@+id/myTrips"
-        android:layout_alignRight="@+id/myTrips"
-        android:layout_alignEnd="@+id/myTrips"
-        android:onClick="startNewTrip" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/myTripsBtn"
-        android:id="@+id/myTrips"
-        android:layout_above="@+id/spending"
+        android:onClick="startNewTrip"
+        android:layout_above="@+id/myTrips"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="29dp"
-        android:layout_alignRight="@+id/spending"
-        android:layout_alignEnd="@+id/spending"
-        android:onClick="startMyTrips" />
+        android:layout_marginBottom="51dp"
+        android:background="@color/color_purple"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_light" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:height="80dp"
         android:text="@string/viewSpendBtn"
         android:id="@+id/spending"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
+        android:onClick="startAvgSpending"
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/myTrips"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:onClick="startAvgSpending"
-         />
+        android:background="@color/color_purple"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_light" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/app_name"
-        android:id="@+id/title"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:height="80dp"
+        android:text="@string/myTripsBtn"
+        android:id="@+id/myTrips"
+        android:onClick="startMyTrips"
+        android:background="@color/color_purple"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_light" />
+
 </RelativeLayout>
