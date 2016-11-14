@@ -7,6 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
     tools:context="com.example.fisli.basketbuddy.AvgSpending">
 
     <TextView
@@ -16,7 +17,8 @@
         android:text="@string/avgSpendingMessage"
         android:id="@+id/avgSpendingMessage"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textSize="36sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -45,5 +47,7 @@
         android:id="@+id/avgSpendingBackBtn"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="backToHome" />
+        android:onClick="backToHome"
+        android:background="@color/color_purple"
+        android:textColor="@android:color/background_light" />
 </RelativeLayout>

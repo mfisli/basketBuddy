@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
     tools:context=".TripMenu">
 
     <Button
@@ -18,7 +19,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="45dp"
         android:id="@+id/done"
-        android:onClick="endTrip"/>
+        android:onClick="endTrip"
+        android:background="@color/color_purple"
+        android:textColor="@android:color/background_light" />
 
     <TextView
         android:text="VIEWING TRIP"
@@ -38,5 +41,7 @@
         android:layout_alignStart="@+id/done"
         android:layout_marginTop="36dp"
         android:id="@+id/start"
-        android:onClick="startShopping"/>
+        android:onClick="startShopping"
+        android:background="@color/color_purple"
+        android:textColor="@android:color/background_light" />
 </RelativeLayout>

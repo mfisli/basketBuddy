@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingTop="@dimen/activity_vertical_margin">
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background">
     <!--
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -57,16 +58,6 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:layout_alignTop="@+id/storeHoursLabel"
-        android:layout_toRightOf="@+id/storeHoursLabel"
-        android:layout_toEndOf="@+id/storeHoursLabel"
-        android:id="@+id/storeHoursInput" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
         android:layout_alignTop="@+id/storeNameLabel"
         android:layout_alignLeft="@+id/storeHoursInput"
         android:layout_alignStart="@+id/storeHoursInput"
@@ -78,7 +69,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/storeTitleLabel" />
+        android:id="@+id/storeTitleLabel"
+        android:textSize="30sp" />
 
     <Button
         android:text="@string/doneBtn"
@@ -87,7 +79,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/doneBtn"
-        android:onClick="backToNewTrip"/>
+        android:onClick="backToNewTrip"
+        android:textColor="@android:color/background_light"
+        android:background="@color/color_purple" />
 
     <Button
         android:text="@string/createNewItemBtn"
@@ -97,5 +91,17 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:id="@+id/createNewItemBtn"
-        android:onClick="createNewItem"/>
+        android:onClick="createNewItem"
+        android:textColor="@android:color/background_light"
+        android:background="@color/color_purple" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/storeHoursInput"
+        android:layout_alignTop="@+id/storeHoursLabel"
+        android:layout_toRightOf="@+id/storeHoursLabel"
+        android:layout_toEndOf="@+id/storeHoursLabel" />
 </RelativeLayout>
