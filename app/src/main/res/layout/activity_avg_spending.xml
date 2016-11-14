@@ -18,7 +18,8 @@
         android:id="@+id/avgSpendingMessage"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="36sp" />
+        android:textSize="36sp"
+        android:textStyle="normal|bold" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -28,17 +29,9 @@
         android:id="@+id/avgSpendingTotal"
         android:layout_above="@+id/avgSpendingRange"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="95dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/avgSpendingRange"
-        android:id="@+id/avgSpendingRange"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/avgSpendingMessage"
-        android:layout_alignStart="@+id/avgSpendingMessage" />
+        android:layout_marginBottom="95dp"
+        android:textStyle="normal|bold"
+        android:textSize="24sp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -50,4 +43,14 @@
         android:onClick="backToHome"
         android:background="@color/color_purple"
         android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/avgSpendingRange"
+        android:id="@+id/avgSpendingRange"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="normal|bold" />
 </RelativeLayout>

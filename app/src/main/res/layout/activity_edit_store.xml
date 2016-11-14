@@ -21,7 +21,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginLeft="27dp"
-        android:layout_marginStart="27dp" />
+        android:layout_marginStart="27dp"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black" />
 
     <TextView
         android:text="@string/storeNameLabel"
@@ -31,7 +33,9 @@
         android:id="@+id/storeNameLabel"
         android:layout_below="@+id/storeHoursLabel"
         android:layout_alignLeft="@+id/storeHoursLabel"
-        android:layout_alignStart="@+id/storeHoursLabel" />
+        android:layout_alignStart="@+id/storeHoursLabel"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black" />
 
     <TextView
         android:text="@string/storeHoursLabel"
@@ -41,7 +45,9 @@
         android:id="@+id/storeHoursLabel"
         android:layout_below="@+id/storeAddressLabel"
         android:layout_alignLeft="@+id/storeAddressLabel"
-        android:layout_alignStart="@+id/storeAddressLabel" />
+        android:layout_alignStart="@+id/storeAddressLabel"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -51,7 +57,8 @@
         android:layout_alignTop="@+id/storeAddressLabel"
         android:layout_toRightOf="@+id/storeNameLabel"
         android:layout_toEndOf="@+id/storeNameLabel"
-        android:id="@+id/storeAddressInput" />
+        android:id="@+id/storeAddressInput"
+        android:textStyle="normal|bold" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -61,7 +68,8 @@
         android:layout_alignTop="@+id/storeNameLabel"
         android:layout_alignLeft="@+id/storeHoursInput"
         android:layout_alignStart="@+id/storeHoursInput"
-        android:id="@+id/storeNameInput" />
+        android:id="@+id/storeNameInput"
+        android:textStyle="normal|bold" />
 
     <TextView
         android:text="@string/storeTitleLabel"
@@ -70,7 +78,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/storeTitleLabel"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black" />
 
     <Button
         android:text="@string/doneBtn"
@@ -103,5 +113,6 @@
         android:id="@+id/storeHoursInput"
         android:layout_alignTop="@+id/storeHoursLabel"
         android:layout_toRightOf="@+id/storeHoursLabel"
-        android:layout_toEndOf="@+id/storeHoursLabel" />
+        android:layout_toEndOf="@+id/storeHoursLabel"
+        android:textStyle="normal|bold" />
 </RelativeLayout>

@@ -13,57 +13,8 @@
     tools:context=".ItemEdit">
     <!--tools:showIn="@layout/activity_item_edit"> -->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/itemName"
-        android:id="@+id/itemName"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="72dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/itemQuantity"
-        android:id="@+id/itemQuantity"
-        android:layout_below="@+id/itemName"
-        android:layout_alignLeft="@+id/itemName"
-        android:layout_alignStart="@+id/itemName" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/itemAisle"
-        android:id="@+id/itemAisle"
-        android:layout_below="@+id/itemQuantity"
-        android:layout_alignLeft="@+id/itemQuantity"
-        android:layout_alignStart="@+id/itemQuantity" />
-
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/itemNameInput"
-        android:inputType="text"
-        android:layout_alignBottom="@+id/itemName"
-        android:layout_alignLeft="@+id/itemQuantityInput"
-        android:layout_alignStart="@+id/itemQuantityInput" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/itemQuantityInput"
-        android:inputType="text"
-        android:layout_alignBottom="@+id/itemQuantity"
-        android:layout_toRightOf="@+id/itemQuantity"
-        android:layout_toEndOf="@+id/itemQuantity" />
-
-    <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/itemAisleInput"
         android:inputType="text"
@@ -81,5 +32,62 @@
         android:onClick="backToStore"
         android:textColor="@android:color/background_light"
         android:background="@color/color_purple" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/itemName"
+        android:id="@+id/itemName"
+        android:layout_above="@+id/itemQuantityInput"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="42dp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/itemQuantity"
+        android:id="@+id/itemQuantity"
+        android:layout_marginBottom="47dp"
+        android:layout_above="@+id/itemAisleInput"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="normal|bold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/itemNameInput"
+        android:inputType="text"
+        android:layout_alignBaseline="@+id/itemName"
+        android:layout_alignBottom="@+id/itemName"
+        android:layout_toEndOf="@+id/itemQuantity" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/itemQuantityInput"
+        android:inputType="text"
+        android:layout_alignBaseline="@+id/itemQuantity"
+        android:layout_alignBottom="@+id/itemQuantity"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/itemQuantity"
+        android:layout_toRightOf="@+id/itemQuantity" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/itemAisle"
+        android:id="@+id/itemAisle"
+        android:layout_marginBottom="127dp"
+        android:layout_above="@+id/doneBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="normal|bold" />
 
 </RelativeLayout>

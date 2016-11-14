@@ -18,17 +18,8 @@
         android:id="@+id/tripSummaryMessage"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="30sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/tripSummaryTotal"
-        android:id="@+id/tripSummaryTotal"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="152dp" />
+        android:textSize="30sp"
+        android:textStyle="normal|bold" />
 
     <Button
         android:layout_width="wrap_content"
@@ -40,5 +31,16 @@
         android:onClick="backToHome"
         android:background="@color/color_purple"
         android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/tripSummaryTotal"
+        android:id="@+id/tripSummaryTotal"
+        android:textStyle="normal|bold"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp" />
 
 </RelativeLayout>
