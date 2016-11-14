@@ -12,20 +12,6 @@
 
 
     <TextView
-        android:text="@string/storeAddressLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:id="@+id/storeAddressLabel"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="27dp"
-        android:layout_marginStart="27dp"
-        android:textStyle="normal|bold"
-        android:textColor="@android:color/black" />
-
-    <TextView
         android:text="@string/storeNameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,7 +21,8 @@
         android:layout_alignLeft="@+id/storeHoursLabel"
         android:layout_alignStart="@+id/storeHoursLabel"
         android:textStyle="normal|bold"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
 
     <TextView
         android:text="@string/storeHoursLabel"
@@ -47,29 +34,8 @@
         android:layout_alignLeft="@+id/storeAddressLabel"
         android:layout_alignStart="@+id/storeAddressLabel"
         android:textStyle="normal|bold"
-        android:textColor="@android:color/black" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_alignTop="@+id/storeAddressLabel"
-        android:layout_toRightOf="@+id/storeNameLabel"
-        android:layout_toEndOf="@+id/storeNameLabel"
-        android:id="@+id/storeAddressInput"
-        android:textStyle="normal|bold" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_alignTop="@+id/storeNameLabel"
-        android:layout_alignLeft="@+id/storeHoursInput"
-        android:layout_alignStart="@+id/storeHoursInput"
-        android:id="@+id/storeNameInput"
-        android:textStyle="normal|bold" />
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
 
     <TextView
         android:text="@string/storeTitleLabel"
@@ -93,17 +59,17 @@
         android:textColor="@android:color/background_light"
         android:background="@color/color_purple" />
 
-    <Button
-        android:text="@string/createNewItemBtn"
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/storeNameInput"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/createNewItemBtn"
-        android:onClick="createNewItem"
-        android:textColor="@android:color/background_light"
-        android:background="@color/color_purple" />
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/storeAddressInput"
+        android:textStyle="normal|bold"
+        android:layout_alignBaseline="@+id/storeAddressLabel"
+        android:layout_alignBottom="@+id/storeAddressLabel"
+        android:layout_toRightOf="@+id/storeNameLabel"
+        android:layout_toEndOf="@+id/storeNameLabel" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -111,8 +77,47 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/storeHoursInput"
-        android:layout_alignTop="@+id/storeHoursLabel"
+        android:textStyle="normal|bold"
+        android:layout_alignBaseline="@+id/storeHoursLabel"
+        android:layout_alignBottom="@+id/storeHoursLabel"
         android:layout_toRightOf="@+id/storeHoursLabel"
-        android:layout_toEndOf="@+id/storeHoursLabel"
-        android:textStyle="normal|bold" />
+        android:layout_toEndOf="@+id/storeHoursLabel" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/storeNameInput"
+        android:textStyle="normal|bold"
+        android:layout_alignBaseline="@+id/storeNameLabel"
+        android:layout_alignBottom="@+id/storeNameLabel"
+        android:layout_alignLeft="@+id/storeHoursInput"
+        android:layout_alignStart="@+id/storeHoursInput" />
+
+    <Button
+        android:text="@string/createNewItemBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/createNewItemBtn"
+        android:onClick="createNewItem"
+        android:textColor="@android:color/background_light"
+        android:background="@color/color_purple"
+        android:layout_marginTop="37dp"
+        android:layout_below="@+id/storeNameInput"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/storeAddressLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:id="@+id/storeAddressLabel"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/storeTitleLabel"
+        android:layout_alignRight="@+id/createNewItemBtn"
+        android:layout_alignEnd="@+id/createNewItemBtn"
+        android:textSize="18sp" />
 </RelativeLayout>
