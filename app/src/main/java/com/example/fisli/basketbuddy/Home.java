@@ -5,19 +5,28 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 
 public class Home extends AppCompatActivity {
-    // hello, my name is Maks and I do not like Android Studio
+    private static final String TAG = Home.class.getName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        Log.d(TAG,"onCreate");
+
     }
 
     //starts New TripMenu Activity
     public void startNewTrip(View v) {
+        Log.d(TAG,"entering startNewTrip");
+        EditText tripNameEditText   = (EditText)findViewById(R.id.inputNewTripName);
+        String tripName      =  tripNameEditText.getText().toString();
+        Log.d(TAG,"EditText tripName: " + tripName);
         Intent myIntent = new Intent(Home.this, NewTrip.class);
+        myIntent.putExtra("tripName", tripName);
         Home.this.startActivity(myIntent);
+        Log.d(TAG,"exiting startNewTrip");
     }
 
     //starts TripMenu History Activity

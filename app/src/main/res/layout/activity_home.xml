@@ -8,46 +8,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Home">
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/newTripBtn"
-        android:id="@+id/newTrip"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="59dp"
-        android:layout_alignLeft="@+id/myTrips"
-        android:layout_alignStart="@+id/myTrips"
-        android:layout_alignRight="@+id/myTrips"
-        android:layout_alignEnd="@+id/myTrips"
-        android:onClick="startNewTrip" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/myTripsBtn"
-        android:id="@+id/myTrips"
-        android:layout_above="@+id/spending"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="29dp"
-        android:layout_alignRight="@+id/spending"
-        android:layout_alignEnd="@+id/spending"
-        android:onClick="startMyTrips" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/viewSpendBtn"
-        android:id="@+id/spending"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="startAvgSpending"
-         />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -56,4 +16,48 @@
         android:id="@+id/title"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="TripName"
+        android:ems="10"
+        android:id="@+id/inputNewTripName"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/myTripsBtn"
+        android:id="@+id/myTrips"
+        android:onClick="startMyTrips"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/newTrip"
+        android:layout_alignEnd="@+id/newTrip" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/viewSpendBtn"
+        android:id="@+id/spending"
+        android:onClick="startAvgSpending"
+        android:layout_below="@+id/myTrips"
+        android:layout_alignRight="@+id/title"
+        android:layout_alignEnd="@+id/title"
+        android:layout_marginTop="31dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/newTripBtn"
+        android:id="@+id/newTrip"
+        android:onClick="startNewTrip"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/editTextNewTrip"
+        android:layout_centerHorizontal="true" />
+
+
 </RelativeLayout>
