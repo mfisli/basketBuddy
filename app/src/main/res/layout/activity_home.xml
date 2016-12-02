@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/background"
+    android:background="@color/color_white"
     tools:context=".Home">
     <TextView
         android:layout_width="wrap_content"
@@ -18,16 +18,19 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <EditText
+    <!--android:background="@color/color_purple"-->
+        <!--android:textColor="@android:color/background_light"-->
+        <!--android:textSize="18sp"/>-->
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="TripName"
-        android:ems="10"
-        android:id="@+id/inputNewTripName"
-        android:layout_below="@+id/title"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
+        android:text="@string/myTripsBtn"
+        android:id="@+id/myTrips"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/newTrip"
+        android:layout_alignEnd="@+id/newTrip"
+        android:onClick="startTripHistory"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -35,37 +38,24 @@
         android:text="@string/newTripBtn"
         android:id="@+id/newTrip"
         android:onClick="startNewTrip"
-        android:layout_marginTop="32dp"
-        android:layout_below="@+id/editTextNewTrip"
+        android:layout_above="@+id/myTrips"
         android:layout_centerHorizontal="true"
-        android:background="@color/color_purple"
-        android:textColor="@android:color/background_light"
-        android:textSize="18sp"/>
+        android:layout_marginBottom="52dp" />
 
-    <Button
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/myTripsBtn"
-        android:id="@+id/myTrips"
-        android:onClick="startMyTrips"
-        android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/newTrip"
-        android:layout_alignEnd="@+id/newTrip" />
+        android:inputType="textPersonName"
+        android:hint="Name your new trip!"
+        android:ems="10"
+        android:id="@+id/inputNewTripName"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true" />
+    <!--android:background="@color/color_purple"-->
+        <!--android:textSize="18sp"-->
+        <!--android:textColor="@android:color/background_light" />-->
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/viewSpendBtn"
-        android:id="@+id/spending"
-        android:onClick="startAvgSpending"
-        android:layout_below="@+id/myTrips"
-        android:layout_alignRight="@+id/title"
-        android:layout_alignEnd="@+id/title"
-        android:layout_marginTop="31dp"
-        android:background="@color/color_purple"
-        android:textSize="18sp"
-        android:textColor="@android:color/background_light" />
-    />
 
 
 

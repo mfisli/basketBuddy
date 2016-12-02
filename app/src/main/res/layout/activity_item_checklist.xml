@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/background"
+    android:background="@color/color_white"
     tools:context="com.example.fisli.basketbuddy.ItemChecklist">
 
     <TextView
@@ -15,53 +15,66 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/storeTitle"
-        android:id="@+id/storeName"
+        android:id="@+id/storeTitle"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textSize="30sp" />
 
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/doneBtn"-->
+        <!--android:id="@+id/doneBtn"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:onClick="startReceipt"-->
+        <!--android:background="@color/color_purple"-->
+        <!--android:textColor="@android:color/background_light" />-->
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/editBtn"-->
+        <!--android:id="@+id/editBtn"-->
+        <!--android:layout_alignTop="@+id/doneBtn"-->
+        <!--android:layout_marginRight="36dp"-->
+        <!--android:layout_marginEnd="36dp"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:onClick="startStoreEdit"-->
+        <!--android:background="@color/color_purple"-->
+        <!--android:textColor="@android:color/background_light" />-->
+
+    <LinearLayout
+        android:id="@+id/checkboxLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/storeTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+    </LinearLayout>
+
     <Button
+        android:text="Ok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/doneBtn"
-        android:id="@+id/doneBtn"
+        android:id="@+id/backToTripMenuBtn"
+        android:onClick="backToTripMenu"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_toRightOf="@+id/item1"
-        android:layout_toEndOf="@+id/item1"
-        android:onClick="startReceipt"
-        android:background="@color/color_purple"
-        android:textColor="@android:color/background_light" />
+        android:layout_centerHorizontal="true" />
 
     <Button
+        android:text="Remove All Items"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/editBtn"
-        android:id="@+id/editBtn"
-        android:layout_alignTop="@+id/doneBtn"
-        android:layout_alignRight="@+id/item1"
-        android:layout_alignEnd="@+id/item1"
-        android:layout_marginRight="36dp"
-        android:layout_marginEnd="36dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="startStoreEdit"
-        android:background="@color/color_purple"
-        android:textColor="@android:color/background_light" />
+        android:id="@+id/removeAllItemsBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/backToTripMenuBtn"
+        android:layout_toEndOf="@+id/backToTripMenuBtn"
+        android:onClick="deleteItems"/>
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="item1"
-        android:id="@+id/item1"
-        android:checked="false"
-        android:layout_marginTop="66dp"
-        android:width="400px"
-        android:height="100px"
-        android:layout_below="@+id/storeName"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textSize="18sp" />
 
 </RelativeLayout>

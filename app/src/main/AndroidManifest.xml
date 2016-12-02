@@ -20,10 +20,7 @@
             android:name=".ItemEdit"
             android:label="@string/title_activity_item_edit"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".TripSummary" />
-        <activity android:name=".Receipt" />
         <activity android:name=".TripHistory" />
-        <activity android:name=".AvgSpending" />
         <activity android:name=".EditStore" />
         <activity android:name=".NewTrip" />
         <activity android:name=".TripMenu"></activity>

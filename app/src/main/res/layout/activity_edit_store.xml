@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/background">
+    android:background="@color/color_white">
     <!--
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -48,21 +48,11 @@
         android:textStyle="normal|bold"
         android:textColor="@android:color/black" />
 
-    <Button
-        android:text="@string/doneBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/doneBtn"
-        android:onClick="backToNewTrip"
-        android:textColor="@android:color/background_light"
-        android:background="@color/color_purple" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
+        android:hint="Address"
         android:ems="10"
         android:id="@+id/storeAddressInput"
         android:textStyle="normal|bold"
@@ -75,6 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
+        android:hint="Store Hours"
         android:ems="10"
         android:id="@+id/storeHoursInput"
         android:textStyle="normal|bold"
@@ -87,6 +78,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
+        android:hint="Name"
         android:ems="10"
         android:id="@+id/storeNameInput"
         android:textStyle="normal|bold"
@@ -108,6 +100,17 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@android:id/list"
+        android:layout_below="@+id/createNewItemBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#bbbbbb" />
+
     <TextView
         android:text="@string/storeAddressLabel"
         android:layout_width="wrap_content"
@@ -120,4 +123,25 @@
         android:layout_alignRight="@+id/createNewItemBtn"
         android:layout_alignEnd="@+id/createNewItemBtn"
         android:textSize="18sp" />
+
+    <Button
+        android:text="Delete Store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/deleteStoreBtn"
+        android:onClick="deleteStore"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/storeAddressInput"
+        android:layout_toStartOf="@+id/storeAddressInput" />
+
+    <Button
+        android:text="@string/doneBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/doneBtn"
+        android:onClick="backToNewTrip"
+        android:textColor="@android:color/background_light"
+        android:background="@color/color_purple"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

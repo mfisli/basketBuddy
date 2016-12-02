@@ -19,26 +19,19 @@ public class Home extends AppCompatActivity {
 
     //starts New TripMenu Activity
     public void startNewTrip(View v) {
-        Log.d(TAG,"entering startNewTrip");
+        Log.d(TAG,">>>entering startNewTrip");
         EditText tripNameEditText   = (EditText)findViewById(R.id.inputNewTripName);
-        String tripName      =  tripNameEditText.getText().toString();
-        Log.d(TAG,"EditText tripName: " + tripName);
+        String newTrip      =  tripNameEditText.getText().toString();
+        Log.d(TAG,"Going to NewTrip.class with intent: " + newTrip);
         Intent myIntent = new Intent(Home.this, NewTrip.class);
-        myIntent.putExtra("tripName", tripName);
+        myIntent.putExtra("newTrip", newTrip);
         Home.this.startActivity(myIntent);
-        Log.d(TAG,"exiting startNewTrip");
+        Log.d(TAG,"<<<exiting startNewTrip");
     }
 
     //starts TripMenu History Activity
-    public void startMyTrips(View v) {
+    public void startTripHistory(View v) {
         Intent myIntent = new Intent(Home.this, TripHistory.class);
         Home.this.startActivity(myIntent);
     }
-
-    //starts Average Spending Activity
-    public void startAvgSpending(View v) {
-        Intent myIntent = new Intent(Home.this, AvgSpending.class);
-        Home.this.startActivity(myIntent);
-    }
-
 }

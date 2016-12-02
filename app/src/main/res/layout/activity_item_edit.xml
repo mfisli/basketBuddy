@@ -8,20 +8,92 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/background"
+    android:background="@color/color_white"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".ItemEdit">
     <!--tools:showIn="@layout/activity_item_edit"> -->
-
-    <EditText
-        android:layout_width="match_parent"
+    <TextView
+        android:text="Item Title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/itemAisleInput"
-        android:inputType="text"
-        android:layout_alignBottom="@+id/itemAisle"
-        android:layout_toRightOf="@+id/itemQuantity"
-        android:layout_toEndOf="@+id/itemQuantity" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/itemEditTitle"
+        android:layout_margin="10dp"/>
+    <!--Name-->
+    <TextView
+        android:text="Name: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/itemEditLabelName"
+        android:layout_alignBaseline="@+id/itemEditInputName"
+        android:layout_alignBottom="@+id/itemEditInputName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:ems="10"
+        android:layout_below="@+id/itemEditTitle"
+        android:layout_toRightOf="@+id/itemEditLabelName"
+        android:id="@+id/itemEditInputName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
 
+    <!--Quantity-->
+    <TextView
+        android:text="Quantity: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/itemEditLabelQuantity"
+        android:layout_alignBaseline="@+id/itemEditInputQuantity"
+        android:layout_alignBottom="@+id/itemEditInputQuantity"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Quantity"
+        android:ems="10"
+        android:layout_below="@+id/itemEditInputName"
+        android:layout_toRightOf="@+id/itemEditLabelAisle"
+        android:id="@+id/itemEditInputQuantity"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+    <!--Aisle-->
+    <TextView
+        android:text="Aisle: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/itemEditLabelAisle"
+        android:layout_alignBaseline="@+id/itemEditInputAisle"
+        android:layout_alignBottom="@+id/itemEditInputAisle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Aisle"
+        android:ems="10"
+        android:layout_below="@+id/itemEditInputQuantity"
+        android:layout_alignLeft="@+id/itemEditInputQuantity"
+        android:layout_alignStart="@+id/itemEditInputQuantity"
+        android:id="@+id/itemEditInputAisle"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
     <Button
         android:text="@string/doneBtn"
         android:layout_width="wrap_content"
@@ -32,84 +104,4 @@
         android:onClick="backToStore"
         android:textColor="@android:color/background_light"
         android:background="@color/color_purple" />
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/itemName"
-        android:id="@+id/itemName"
-        android:layout_above="@+id/itemQuantityInput"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="42dp"
-        android:textStyle="normal|bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/itemEditName"
-        android:id="@+id/itemEditName"
-        android:layout_below="@+id/itemOutputMessage"/>
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/itemEditNameInput"
-        android:layout_toRightOf="@+id/itemEditName"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/itemQuantity"
-        android:id="@+id/itemQuantity"
-        android:layout_marginBottom="47dp"
-        android:layout_above="@+id/itemAisleInput"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textStyle="normal|bold" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/itemEditQuantityInput"
-        android:layout_toRightOf="@+id/itemEditQuantity"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/itemEditAisle"
-        android:id="@+id/itemEditAisle"
-        android:layout_below="@+id/itemEditQuantity"/>
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/itemEditAisleInput"
-        android:layout_toRightOf="@+id/itemEditAisle"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/itemQuantityInput"
-        android:inputType="text"
-        android:layout_alignBaseline="@+id/itemQuantity"
-        android:layout_alignBottom="@+id/itemQuantity"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/itemQuantity"
-        android:layout_toRightOf="@+id/itemQuantity" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/itemAisle"
-        android:id="@+id/itemAisle"
-        android:layout_marginBottom="127dp"
-        android:layout_above="@+id/doneBtn"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textStyle="normal|bold" />
 </RelativeLayout>
