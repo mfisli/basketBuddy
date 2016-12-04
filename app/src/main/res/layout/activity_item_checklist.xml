@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/color_white"
+    android:background="@color/color_bg"
     tools:context="com.example.fisli.basketbuddy.ItemChecklist">
 
     <TextView
@@ -20,32 +20,6 @@
         android:layout_centerHorizontal="true"
         android:textSize="30sp" />
 
-    <!--<Button-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="@string/doneBtn"-->
-        <!--android:id="@+id/doneBtn"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:layout_alignParentRight="true"-->
-        <!--android:layout_alignParentEnd="true"-->
-        <!--android:onClick="startReceipt"-->
-        <!--android:background="@color/color_purple"-->
-        <!--android:textColor="@android:color/background_light" />-->
-
-    <!--<Button-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="@string/editBtn"-->
-        <!--android:id="@+id/editBtn"-->
-        <!--android:layout_alignTop="@+id/doneBtn"-->
-        <!--android:layout_marginRight="36dp"-->
-        <!--android:layout_marginEnd="36dp"-->
-        <!--android:layout_alignParentLeft="true"-->
-        <!--android:layout_alignParentStart="true"-->
-        <!--android:onClick="startStoreEdit"-->
-        <!--android:background="@color/color_purple"-->
-        <!--android:textColor="@android:color/background_light" />-->
-
     <LinearLayout
         android:id="@+id/checkboxLayout"
         android:orientation="vertical"
@@ -54,27 +28,33 @@
         android:layout_below="@+id/storeTitle"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp">
-
     </LinearLayout>
-
-    <Button
-        android:text="Ok"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/backToTripMenuBtn"
-        android:onClick="backToTripMenu"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="Remove All Items"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/removeAllItemsBtn"
+        android:onClick="deleteItems"
+        android:textColor="@color/color_white"
+        android:background="@color/color_red"
+        android:width="175dp"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/backToTripMenuBtn"
-        android:layout_toEndOf="@+id/backToTripMenuBtn"
-        android:onClick="deleteItems"/>
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/backToTripMenuBtn"
+        android:onClick="backToTripMenu"
+        android:textColor="@color/color_white"
+        android:background="@color/buddy_green"
+        android:width="175dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>

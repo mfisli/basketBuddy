@@ -13,6 +13,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.fisli.basketbuddy.R.color.buddy_green;
+
 public class NewTrip extends ListActivity {
     private static final String TAG = NewTrip.class.getName();
     private List<String> listValues;

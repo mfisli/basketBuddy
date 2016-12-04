@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/color_white"
+    android:background="@color/color_bg"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".ItemEdit">
     <!--tools:showIn="@layout/activity_item_edit"> -->
@@ -17,6 +17,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
         android:layout_centerHorizontal="true"
         android:id="@+id/itemEditTitle"
         android:layout_margin="10dp"/>
@@ -29,6 +32,8 @@
         android:layout_alignBaseline="@+id/itemEditInputName"
         android:layout_alignBottom="@+id/itemEditInputName"
         android:layout_alignParentLeft="true"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
         android:layout_alignParentStart="true"
         android:layout_margin="10dp"/>
     <EditText
@@ -55,20 +60,9 @@
         android:layout_alignBottom="@+id/itemEditInputQuantity"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
         android:layout_margin="10dp"/>
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="Quantity"
-        android:ems="10"
-        android:layout_below="@+id/itemEditInputName"
-        android:layout_toRightOf="@+id/itemEditLabelAisle"
-        android:id="@+id/itemEditInputQuantity"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"/>
     <!--Aisle-->
     <TextView
         android:text="Aisle: "
@@ -78,22 +72,11 @@
         android:layout_alignBaseline="@+id/itemEditInputAisle"
         android:layout_alignBottom="@+id/itemEditInputAisle"
         android:layout_alignParentLeft="true"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
         android:layout_alignParentStart="true"
         android:layout_margin="10dp"/>
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="Aisle"
-        android:ems="10"
-        android:layout_below="@+id/itemEditInputQuantity"
-        android:layout_alignLeft="@+id/itemEditInputQuantity"
-        android:layout_alignStart="@+id/itemEditInputQuantity"
-        android:id="@+id/itemEditInputAisle"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"/>
+
     <Button
         android:text="@string/doneBtn"
         android:layout_width="wrap_content"
@@ -102,6 +85,32 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/doneBtn"
         android:onClick="backToStore"
-        android:textColor="@android:color/background_light"
-        android:background="@color/color_purple" />
+        android:textColor="@color/color_white"
+        android:width="500dp"
+        android:background="@color/buddy_green"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Quantity"
+        android:ems="10"
+        android:id="@+id/itemEditInputQuantity"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/itemEditInputName"
+        android:layout_alignLeft="@+id/itemEditInputName"
+        android:layout_alignStart="@+id/itemEditInputName" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Aisle"
+        android:ems="10"
+        android:id="@+id/itemEditInputAisle"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/itemEditInputQuantity"
+        android:layout_alignLeft="@+id/itemEditInputQuantity"
+        android:layout_alignStart="@+id/itemEditInputQuantity" />
 </RelativeLayout>

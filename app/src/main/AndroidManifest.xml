@@ -7,23 +7,25 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Home">
+        android:theme="@style/BasketBuddy">
+        <activity android:name=".Home" android:theme="@style/BasketBuddy">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ItemChecklist" />
+        <activity android:name=".ItemChecklist" android:theme="@style/BasketBuddy" />
         <activity
             android:name=".ItemEdit"
             android:label="@string/title_activity_item_edit"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".TripHistory" />
-        <activity android:name=".EditStore" />
-        <activity android:name=".NewTrip" />
-        <activity android:name=".TripMenu"></activity>
+            android:theme="@style/BasketBuddy"
+            />
+        <activity android:name=".TripHistory" android:theme="@style/BasketBuddy" />
+        <activity android:name=".EditStore" android:theme="@style/BasketBuddy" />
+        <activity android:name=".NewTrip" android:theme="@style/BasketBuddy" />
+        <activity android:name=".TripMenu" android:theme="@style/BasketBuddy">
+
+        </activity>
     </application>
 
 </manifest>

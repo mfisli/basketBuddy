@@ -24,6 +24,7 @@ public class TripMenu extends ListActivity {
         Log.d(TAG, ">>> Start of onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trip);
+
         setTripTitle();
         populateStoresList();
         Log.d(TAG, "End of onCreate <<<");

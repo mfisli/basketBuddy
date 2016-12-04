@@ -8,8 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/color_white"
-    tools:context="com.example.fisli.basketbuddy.NewTrip">
+    android:background="@color/color_bg"
+    tools:context=".NewTrip">
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,47 +21,54 @@
         android:layout_centerHorizontal="true"
         android:textStyle="normal|bold"
         android:textSize="30sp" />
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@android:id/list"
-        android:layout_below="@+id/createStore"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="#bbbbbb"
-        android:layout_above="@+id/startTrip" />
+
     <Button
-        android:text="New Store"
+        android:text="Add Store"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:id="@+id/createStore"
         android:layout_below="@+id/newtripTitle"
-        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/newtripTitle"
+        android:textColor="@color/color_white"
+        android:background="@color/buddy_green"
+        android:layout_marginTop="21dp"
         android:onClick="startNewStore"
-        android:background="@color/color_purple"
-        android:textColor="@android:color/background_light"/>
+        android:id="@+id/createStore"
+        android:height="40dp"
+        android:width="180dp"
+        />
 
     <Button
         android:text="Delete Trip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/createStore"
         android:id="@+id/deleteTripBtn"
-        android:layout_above="@android:id/list"
-        android:layout_toLeftOf="@+id/createStore"
+        android:width="160dp"
+        android:textColor="@color/color_white"
+        android:background="@color/color_red"
         android:onClick="deleteTrip" />
 
     <Button
         android:text="Start This Trip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/startTrip"
+        android:textColor="@color/color_white"
+        android:background="@color/buddy_green"
+        android:width="500dp"
         android:onClick="startMyTrip"
-        android:background="@color/color_purple"
-        android:textColor="@android:color/background_light"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/startTrip"
+        android:layout_below="@+id/createStore"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/startTrip"
+        android:layout_centerHorizontal="true"
+        android:id="@android:id/list"
+        android:listSelector="@color/buddy_green"
+        android:layout_marginTop="39dp" />
+
 
 </RelativeLayout>
