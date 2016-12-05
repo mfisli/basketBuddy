@@ -129,7 +129,6 @@ public class ItemChecklist extends AppCompatActivity {
     }
 
 
-
     public void startStoreEdit(View v) {
         Intent myIntent = new Intent(ItemChecklist.this, EditStore.class);
         ItemChecklist.this.startActivity(myIntent);

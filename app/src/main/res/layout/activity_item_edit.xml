@@ -13,7 +13,7 @@
     tools:context=".ItemEdit">
     <!--tools:showIn="@layout/activity_item_edit"> -->
     <TextView
-        android:text="Item Title"
+        android:text="New Item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"

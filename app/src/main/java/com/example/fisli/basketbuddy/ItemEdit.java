@@ -103,14 +103,20 @@ public class ItemEdit extends AppCompatActivity {
                 db.endTransaction();
             }
             db.close();
+            Intent intent = getIntent();
+            String currentAddress = intent.getStringExtra("currentAddress");
+            String storeHours = intent.getStringExtra("storeHours");
+
             Intent myIntent = new Intent(ItemEdit.this, EditStore.class);
             myIntent.putExtra("selectedStore", currentStore);
             myIntent.putExtra("currentTrip", currentTrip);
-            Log.d(TAG, "Going to EditStore with selectedStore:" + currentStore);
-            Log.d(TAG, "Going to EditStore with currentTrip:" + currentTrip);
+
+
+            Log.d(TAG, "Going to EditStore with selectedStore:" + currentStore +
+                "currentTrip: " + currentTrip + "currentAddress: " + currentAddress +
+            " storeHours: " + storeHours);
             ItemEdit.this.startActivity(myIntent);
         }
         Log.d(TAG,"<<<End of backToStore (inserting item)");
     }
-
 }

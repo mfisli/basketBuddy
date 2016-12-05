@@ -172,8 +172,6 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         db.close();
         Log.d(TAG, "Exiting isTripNameUnique <<<");
         return result;
-
-
     }
     ///////////////////////////////////////////////////////////////////////////
     // Store accessors and modifiers

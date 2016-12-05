@@ -65,7 +65,7 @@ public class EditStore extends ListActivity {
             this.currentTrip = currentTrip;
         } else {
             Log.d(TAG, "#######Expected intent extras are null - you did something dumb!");
-            throw new UnsupportedOperationException("Should not be here!");
+            //throw new UnsupportedOperationException("Should not be here!");
         }
         Log.d(TAG,"<<<End of setCurrentTrip");
     }
@@ -86,17 +86,44 @@ public class EditStore extends ListActivity {
         Log.d(TAG,"<<<End of populateTextFields");
     }
     //.........................................................................
-    // TODO send intent with current trip
+    // Starts the item edit activity
     public void createNewItem(View v) {
         Log.d(TAG,">>> Start of createNewItem");
+        final SQLiteDatabase db;
+
+        // get values required for inserting into Store table
         EditText storeNameEditText   = (EditText)findViewById(R.id.storeNameInput);
+        EditText storeHoursEditText   = (EditText)findViewById(R.id.storeHoursInput);
+        EditText storeAddressEditText   = (EditText)findViewById(R.id.storeAddressInput);
         String storeName      =  storeNameEditText.getText().toString();
+        String storeHours      =  storeHoursEditText.getText().toString();
+        String storeAddress      =  storeAddressEditText.getText().toString();
+        if(storeName.trim().equals("")) {
+            String text = "Store name cannot be empty.";
+            Toast.makeText(getApplicationContext(), text, Toast.LENGTH_LONG).show();
+        } else {
+            // insert the values into the store table
+            dbOpenHelper = DBOpenHelper.getInstance(getApplicationContext());
+            db = dbOpenHelper.getWritableDatabase();
+            db.beginTransaction();
+            try {
+                dbOpenHelper.insertStoreValues(db, currentStore, currentTrip, storeName, storeAddress, storeHours);
+                currentStore = storeName;
+                db.setTransactionSuccessful();
+            } finally {
+                db.endTransaction();
+            }
+            db.close();
+        }
+  
         Intent myIntent = new Intent(EditStore.this, ItemEdit.class);
         this.currentStore = storeName;
         myIntent.putExtra("currentStore",currentStore);
         myIntent.putExtra("currentTrip",currentTrip);
+
         Log.d(TAG,"Going to ItemEdit with currentStore: " + currentStore
                 + " in trip: " + currentTrip);
+
         EditStore.this.startActivity(myIntent);
         Log.d(TAG,"End of createNewItem <<<");
     }
