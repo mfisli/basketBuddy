@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ItemEdit extends AppCompatActivity {
     private static final String TAG = ItemEdit.class.getName();
@@ -86,26 +87,29 @@ public class ItemEdit extends AppCompatActivity {
         String itemName       =  itemNameEditText.getText().toString();
         String itemQuantity   =  itemQuantityEditText.getText().toString();
         String itemAisle      =  itemAisleEditText.getText().toString();
+        if(itemName.trim().equals("")) {
+            String text = "Item name cannot be empty.";
+            Toast.makeText(getApplicationContext(), text, Toast.LENGTH_LONG).show();
+        } else {
+            // insert the values into the store table
+            dbOpenHelper = DBOpenHelper.getInstance(getApplicationContext());
+            db = dbOpenHelper.getWritableDatabase();
+            db.beginTransaction();
+            try {
+                dbOpenHelper.insertItemValues(db, currentItem, currentStore, itemName, itemQuantity, itemAisle);
 
-        // insert the values into the store table
-        dbOpenHelper = DBOpenHelper.getInstance(getApplicationContext());
-        db = dbOpenHelper.getWritableDatabase();
-        db.beginTransaction();
-        try {
-            dbOpenHelper.insertItemValues(db, currentItem, currentStore, itemName, itemQuantity,itemAisle);
-
-            db.setTransactionSuccessful();
+                db.setTransactionSuccessful();
+            } finally {
+                db.endTransaction();
+            }
+            db.close();
+            Intent myIntent = new Intent(ItemEdit.this, EditStore.class);
+            myIntent.putExtra("selectedStore", currentStore);
+            myIntent.putExtra("currentTrip", currentTrip);
+            Log.d(TAG, "Going to EditStore with selectedStore:" + currentStore);
+            Log.d(TAG, "Going to EditStore with currentTrip:" + currentTrip);
+            ItemEdit.this.startActivity(myIntent);
         }
-        finally {
-            db.endTransaction();
-        }
-        db.close();
-        Intent myIntent = new Intent(ItemEdit.this, EditStore.class);
-        myIntent.putExtra("selectedStore", currentStore);
-        myIntent.putExtra("currentTrip", currentTrip);
-        Log.d(TAG,"Going to EditStore with selectedStore:" + currentStore);
-        Log.d(TAG,"Going to EditStore with currentTrip:" + currentTrip);
-        ItemEdit.this.startActivity(myIntent);
         Log.d(TAG,"<<<End of backToStore (inserting item)");
     }
 

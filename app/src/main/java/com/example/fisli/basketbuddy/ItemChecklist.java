@@ -60,9 +60,11 @@ public class ItemChecklist extends AppCompatActivity {
                 TextView textView = new TextView(this);
                 textView.setText("Quantity: " + dbOpenHelper.getItemQuantity(currentStore,listValues.get(i))
                 + " Aisle: " + dbOpenHelper.getItemAisle(currentStore,listValues.get(i)));
+                textView.setTextSize(18);
                 rowInfo.addView(textView);
                 //checkBox.setOnCheckedChangeListener(this);
                 checkBox.setId(i);
+                checkBox.setTextSize(22);
                 checkBox.setChecked(dbOpenHelper.getChecked(currentStore,listValues.get(i)));
                 Log.d(TAG, "Setting CheckBox id: " + i);
                 checkBox.setText(listValues.get(i));

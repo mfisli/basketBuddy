@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -100,6 +101,7 @@ public class EditStore extends ListActivity {
         Log.d(TAG,"End of createNewItem <<<");
     }
     //.........................................................................
+    // updates the database with a new store
     public void backToNewTrip(View v) {
         Log.d(TAG,">>>Start of backToNewTrip (inserting store)");
         final SQLiteDatabase db;
@@ -111,26 +113,30 @@ public class EditStore extends ListActivity {
         String storeName      =  storeNameEditText.getText().toString();
         String storeHours      =  storeHoursEditText.getText().toString();
         String storeAddress      =  storeAddressEditText.getText().toString();
-
-        // insert the values into the store table
-        dbOpenHelper = DBOpenHelper.getInstance(getApplicationContext());
-        db = dbOpenHelper.getWritableDatabase();
-        db.beginTransaction();
-        try {
-            dbOpenHelper.insertStoreValues(db, currentStore, currentTrip, storeName, storeAddress,storeHours);
-            currentStore = storeName;
-            db.setTransactionSuccessful();
+        if(storeName.trim().equals("")) {
+            String text = "Store name cannot be empty.";
+            Toast.makeText(getApplicationContext(), text, Toast.LENGTH_LONG).show();
+        } else {
+            // insert the values into the store table
+            dbOpenHelper = DBOpenHelper.getInstance(getApplicationContext());
+            db = dbOpenHelper.getWritableDatabase();
+            db.beginTransaction();
+            try {
+                dbOpenHelper.insertStoreValues(db, currentStore, currentTrip, storeName, storeAddress, storeHours);
+                currentStore = storeName;
+                db.setTransactionSuccessful();
+            } finally {
+                db.endTransaction();
+            }
+            db.close();
+            Intent myIntent = new Intent(EditStore.this, NewTrip.class);
+            myIntent.putExtra("establishedTrip", currentTrip);
+            Log.d(TAG, "Going to newTrip with establishedTrip:" + currentTrip);
+            EditStore.this.startActivity(myIntent);
         }
-        finally {
-            db.endTransaction();
-        }
-        db.close();
-        Intent myIntent = new Intent(EditStore.this, NewTrip.class);
-        myIntent.putExtra("establishedTrip", currentTrip);
-        Log.d(TAG,"Going to newTrip with establishedTrip:" + currentTrip);
-        EditStore.this.startActivity(myIntent);
-        Log.d(TAG,"<<<End of backToNewTrip (inserting store)");
+        Log.d(TAG, "<<<End of backToNewTrip (inserting store)");
     }
+    // deletes the store
     public void deleteStore(View v){
         Log.d(TAG,">>>Start of deleteStore");
         final SQLiteDatabase db;

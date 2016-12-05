@@ -17,7 +17,6 @@ public class DBOpenHelper extends SQLiteOpenHelper {
     private static final String TAG = DBOpenHelper.class.getName();
     private static DBOpenHelper instance;
 
-
     public static final int SCHEMA_VERSION = 1;
     public static final String DATABASE_NAME = "basketBuddy7.db";
 
@@ -44,7 +43,8 @@ public class DBOpenHelper extends SQLiteOpenHelper {
     private DBOpenHelper(final Context ctx) {
         super(ctx, DATABASE_NAME, null, SCHEMA_VERSION);
     }
-
+    //.........................................................................
+    // Gets the instance of a helper or constructs one if none exist
     public synchronized static DBOpenHelper getInstance(final Context context) {
         if(instance == null) {
             instance = new DBOpenHelper(context.getApplicationContext());
@@ -52,6 +52,7 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         return instance;
     }
     //.........................................................................
+    // Drops tables and re-creates them
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_TRIP);
@@ -60,6 +61,7 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
     //.........................................................................
+    // Creates tables
     @Override
     public void onCreate(final SQLiteDatabase db) {
         Log.d(TAG, " Entering onCreate");
@@ -102,6 +104,8 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         db.execSQL(CREATE_ITEM_TABLE);
         Log.d(TAG, " Exiting onCreate");
     }
+    ///////////////////////////////////////////////////////////////////////////
+    // Trip accessors and modifiers
     //.........................................................................
     // inserts a trip name into the trip table
     public void insertTripName(final SQLiteDatabase db, final String tripName) {
@@ -153,8 +157,27 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         db.close();
         Log.d(TAG, "deleteTripRecords");
     }
+    //.........................................................................
+    // returns true if trip name is unique
+    public boolean isTripNameUnique(final String tripName){
+        boolean result;
+        Log.d(TAG, ">>> Entering isTripNameUnique");
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT DISTINCT " + COLUMN_TRIP_NAME +
+                " FROM " + TABLE_TRIP
+                + " WHERE " + COLUMN_TRIP_NAME + "= \'" + tripName + "\'";
+        Cursor cursor = db.rawQuery(query, null);
+        result = cursor.getCount() == 0;
+        cursor.close();
+        db.close();
+        Log.d(TAG, "Exiting isTripNameUnique <<<");
+        return result;
+
+
+    }
     ///////////////////////////////////////////////////////////////////////////
     // Store accessors and modifiers
+    //.........................................................................
     // inserts a store record
     public void insertStoreValues(final SQLiteDatabase db, String oldStoreName, String trip, String name,
                                   String address, String hours) {
@@ -202,8 +225,10 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery(query, null);
         cursor.moveToFirst();
         if (cursor.getCount() == 0){
-            Log.d(TAG, "###Cursor did not find anything.");
-            return "ADDRS NOT FOUND";
+            Log.d(TAG, "###Cursor did not find the address.");
+            cursor.close();
+            db.close();
+            return " ";
         }
         result = cursor.getString(0);
         Log.d(TAG, " found ADDRS" + result);
@@ -228,8 +253,10 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery(query, null);
         cursor.moveToFirst();
         if (cursor.getCount() == 0){
-            Log.d(TAG, "###Cursor did not find anything.");
-            return "HRS NOT FOUND";
+            Log.d(TAG, "###Cursor did not find any store hours.");
+            cursor.close();
+            db.close();
+            return " ";
         }
         result = cursor.getString(0);
         Log.d(TAG, " found HRS " + result);
@@ -284,9 +311,10 @@ public class DBOpenHelper extends SQLiteOpenHelper {
 
         Log.d(TAG, "Deleted " + store + " with " + rows + "rows");
     }
+    ///////////////////////////////////////////////////////////////////////////
+    // Items accessors and modifiers
     //.........................................................................
-    // Items
-    //.........................................................................
+    // inserts values into items table
     public void insertItemValues(final SQLiteDatabase db, String oldItemName, String store, String name,
                                   String quantity, String aisle) {
         Log.d(TAG, " Entering insertItemValues");
@@ -316,6 +344,8 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         db.execSQL(query);
         Log.d(TAG, " Exiting insertItemValues");
     }
+    //.........................................................................
+    // Updates the checkboxes
     public void updateCheckBox(final SQLiteDatabase db, String store, String itemname, int mode){
         Log.d(TAG, ">>> Entering updateCheckBox");
         if(store == null || itemname == null){
@@ -333,6 +363,7 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         Log.d(TAG, "Query: " +  query);
         Log.d(TAG, "Exiting updateCheckBox <<<");
     }
+    //.........................................................................
     // gets the items for a given store
     public ArrayList<String> getItem(String storeName) {
         Log.d(TAG, " Entering getItem");
@@ -371,7 +402,7 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         cursor.moveToFirst();
         if (cursor.getCount() == 0){
             Log.d(TAG, "###Cursor did not find anything.");
-            return "QNTY NOT FOUND";
+            return " ";
         }
         result = cursor.getString(0);
         Log.d(TAG, " found QNTY " + result);
@@ -397,7 +428,7 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         cursor.moveToFirst();
         if (cursor.getCount() == 0){
             Log.d(TAG, "###Cursor did not find anything.");
-            return "ASL NOT FOUND";
+            return " ";
         }
         result = cursor.getString(0);
         Log.d(TAG, " found ASL " + result);

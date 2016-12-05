@@ -21,7 +21,7 @@
             android:theme="@style/BasketBuddy"
             />
         <activity android:name=".TripHistory" android:theme="@style/BasketBuddy" />
-        <activity android:name=".EditStore" android:theme="@style/BasketBuddy" />
+        <activity android:name=".EditStore" android:theme="@style/BasketBuddy" android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".NewTrip" android:theme="@style/BasketBuddy" />
         <activity android:name=".TripMenu" android:theme="@style/BasketBuddy">
 
